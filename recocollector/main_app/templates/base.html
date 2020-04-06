@@ -7,20 +7,25 @@
   <title>Reco Collector</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = new M.Sidenav.init(elems, options);
+    });
+    </script>
 <body>
-    <header class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#!" class="brand-logo center">Logo</a>
-                <ul class="left hide-on-med-and-down">
-                    <li><a href="../about/">About</a></li>
-                    <li><a href="../new/">Add a reco</a></li>
-                    <li class="divider"></li>
-                    <li><a href="../recommendations/">My List of Recos</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+  <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo center">Logo</a>
+        <ul class="left hide-on-med-and-down">
+          <li><a href="../about/">About</a></li>
+          <li><a href="../new/">Add a reco</a></li>
+          <li class="divider"></li>
+          <li><a href="../recommendations/">My List of Recos</a></li>
+        </ul>
+      </div>
+  </nav>
+
   <main class="container">
     {% block content %}
     {% endblock %}
@@ -28,5 +33,7 @@
   <footer class="page-footer">
     <div class="right">All Rights Reserved, &copy; 2019 Cat Collector &nbsp;</div>
   </footer>
+  <script type="text/Javascript" src="../static/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
