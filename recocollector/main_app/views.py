@@ -1,6 +1,6 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
 from .models import Reco
-
 
 # Create your views here.
 def home(req):
@@ -15,3 +15,7 @@ def new_reco(req):
 def my_recos(req):
     recos = Reco.objects.all()
     return render(req, 'movies/index.html', {'recos': recos})
+
+class RecoCreate(CreateView):
+    model = Reco
+    fields = '__all__'

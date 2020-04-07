@@ -7,32 +7,27 @@
   <title>Reco Collector</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.sidenav');
-      var instances = new M.Sidenav.init(elems, options);
-    });
-    </script>
+  
 <body>
-  <nav>
-      <div class="nav-wrapper">
-        <a href="../" class="brand-logo center">ShareFlix</a>
-        <ul class="left hide-on-med-and-down">
-          <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'new_reco' %}">Add a reco</a></li>
-          <li class="divider"></li>
-          <li><a href="{% url 'my_recos' %}">My List of Recos</a></li>
-        </ul>
-      </div>
-  </nav>
+  <header class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+          <a href="../" class="brand-logo center">ShareFlix</a>
+          <ul class="left hide-on-med-and-down">
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'new_reco' %}">Add a reco</a></li>
+            <li class="divider"></li>
+            <li><a href="{% url 'my_recos' %}">My List of Recos</a></li>
+          </ul>
+        </div>
+    </nav>
+  </header>
   <main class="container">
     {% block content %}
     {% endblock %}
   </main>
-  <footer class="page-footer">
-    <div class="right">All Rights Reserved, &copy; 2020 ShareFlix</div>
-  </footer>
-  <script type="text/Javascript" src="../static/js/script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <footer class="page-footer center">
+      All Rights Reserved, &copy; 2020 ShareFlix
+    </footer>
 </body>
 </html>
