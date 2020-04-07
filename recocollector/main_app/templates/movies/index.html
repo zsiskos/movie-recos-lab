@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>A list of movies recommended JUST for you</h1>
+<h3>My Watch List</h3>
 <hr />
 <div class="row">
-    {% for reco in reco %}
+    {% for reco in recos %}
     <div class="col s12 m6 l3">
         <div class="card">
             <div class="card-image">
-              <img src="../../static/images/office.jpg">
-              <span class="card-title">{{movie.title}}</span>
+              <img src="../../static/images/{{reco.where}}.png">
+              <span class="card-title">{{reco.title}}</span>
             </div>
             <div class="card-content">
-              <p>How did I hear about this movie? {{movie.howHeard}}</p>
+              <p>How heard? {{reco.how_heard}}</p>
             </div>
             <div class="card-action">
               <a href="#">More details</a>
