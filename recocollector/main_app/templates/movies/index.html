@@ -12,10 +12,10 @@
               <span class="card-title">{{reco.title}}</span>
             </div>
             <div class="card-content">
-              <p>How heard? {{reco.how_heard}}</p>
+              <p class="truncate">How heard? {{reco.how_heard}}</p>
             </div>
             <div class="card-action">
-              <a href="#">More details</a>
+              <a href="{% url 'detail' reco.id %}">Details</a>
             </div>
         </div>
     </div>

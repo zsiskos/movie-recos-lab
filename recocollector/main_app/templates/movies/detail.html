@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h3>More info</h3>
+
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">{{ reco.title }}</span>
+    <p>How heard: {{ reco.how_heard }}</p>
+    <p>Where: {{ reco.where }}</p>
+    <p>Why watch it? {{ reco.description }}</p>
+  </div>
+</div>
+
+{% endblock %}

@@ -19,3 +19,8 @@ def my_recos(req):
 class RecoCreate(CreateView):
     model = Reco
     fields = '__all__'
+    success_url = '/recommendations'
+
+def reco_detail(req, reco_id):
+    reco = Reco.objects.get(id=reco_id)
+    return render(req, 'movies/detail.html', { 'reco': reco})
