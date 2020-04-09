@@ -4,24 +4,22 @@
 <h3>My Watch List</h3>
 <hr />
 <div class="row">
-    {% for reco in recos %}
-    <div class="col s12 m6 l3">
-        <div class="card">
-            <div class="card-image">
-              <img src="../../static/images/{{reco.where}}.png">
-              <span class="card-title">{{reco.title}}</span>
-            </div>
-            <div class="card-content">
-              <p class="truncate">How heard? {{reco.how_heard}}</p>
-            </div>
-            <div class="card-action">
-              <a href="{% url 'detail' reco.id %}">Details</a>
-            </div>
-        </div>
+  {% for reco in recos %}
+  <div class="col s12 m6 l3">
+    <div class="card">
+      <div class="card-image">
+        <img src="../../static/images/{{reco.where}}.png">
+        <span class="card-title">{{reco.title}}</span>
+      </div>
+      <div class="card-content">
+        <p class="truncate">How heard? {{reco.how_heard}}</p>
+      </div>
+      <div class="card-action">
+        <a href="{% url 'detail' reco.id %}">Details</a>
+      </div>
     </div>
-    {% endfor %}
+  </div>
+  {% endfor %}
 </div>
-
-
 
 {% endblock %}
