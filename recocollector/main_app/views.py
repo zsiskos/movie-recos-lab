@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Reco
 from .forms import NotesForm
@@ -34,3 +34,11 @@ def reco_detail(req, reco_id):
     reco = Reco.objects.get(id=reco_id)
     notes_form = NotesForm()
     return render(req, 'movies/detail.html', { 'reco': reco, 'notes_form': notes_form})
+
+def add_note(request, reco_id):
+    form = NotesForm(request.POST)
+    if form.is_valid():
+        new_note = form.save(commit=False)
+        new_note.reco_id = reco_id
+        new_note.save()
+    return redirect('detail', reco_id=reco_id)
