@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class Reco(models.Model):
@@ -10,9 +11,12 @@ class Reco(models.Model):
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return reverse('detail', kwargs={'reco_id': self.id})
+
 class Notes(models.Model):
-    date = models.DateField('watch date')
-    opinion = models.TextField(max_length=500)
+    date = models.DateField()
+    note = models.TextField(max_length=500)
     reco = models.ForeignKey(Reco, on_delete=models.CASCADE)
     
     def __str__(self):
