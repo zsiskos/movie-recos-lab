@@ -19,9 +19,10 @@ An responsive website for movie enthusiasts. It's a place to store movie recomme
 ## Technologies Used
 1. HTML
 2. CSS
-3. JavaScript
-4. Python
-5. Djgano
+3. Materialize
+4. JavaScript
+5. Python
+6. Djgano
 7. PostgreSQL
 
 ---
