@@ -3,7 +3,6 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Reco
 from .forms import NotesForm
 
-# Create your views here.
 class RecoCreate(CreateView):
     model = Reco
     fields = '__all__'
